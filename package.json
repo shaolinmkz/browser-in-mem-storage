@@ -1,7 +1,7 @@
 {
   "name": "browser-in-mem-storage",
   "version": "1.0.0",
-  "description": "Browser in memory storage, protect your tokens from XXS attacks",
+  "description": "Browser in-memory storage, protect token against common XXS attacks",
   "main": "lib/index.js",
   "types": "lib",
   "scripts": {
