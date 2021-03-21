@@ -1,0 +1,33 @@
+{
+  "name": "browser-inmem-storage",
+  "version": "1.0.0",
+  "description": "Browser in memory storage that retains information after a refresh",
+  "main": "lib/index.js",
+  "types": "lib",
+  "scripts": {
+    "test": "jest --coverage",
+    "build": "rm -rf lib && tsc -p ."
+  },
+  "keywords": [
+    "Browser in memory storage",
+    "Inn memory storage"
+  ],
+  "author": "Nwabuzor, Chukwuemeka Obiora",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/preset-typescript": "^7.9.0",
+    "@types/jest": "^25.2.1",
+    "babel-jest": "^25.5.1",
+    "jest": "^25.5.4",
+    "typescript": "^3.8.3"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shaolinmkz/browser-inmem-storage"
+  }
+}
