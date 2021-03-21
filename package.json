@@ -1,7 +1,7 @@
 {
-  "name": "browser-inmem-storage",
+  "name": "browser-in-mem-storage",
   "version": "1.0.0",
-  "description": "Browser in memory storage that retains information after a refresh",
+  "description": "Browser in memory storage, protect your tokens from XXS attacks",
   "main": "lib/index.js",
   "types": "lib",
   "scripts": {
@@ -10,24 +10,24 @@
   },
   "keywords": [
     "Browser in memory storage",
-    "Inn memory storage"
+    "In memory storage"
   ],
   "author": "Nwabuzor, Chukwuemeka Obiora",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.9.6",
-    "@babel/preset-env": "^7.9.6",
-    "@babel/preset-typescript": "^7.9.0",
-    "@types/jest": "^25.2.1",
-    "babel-jest": "^25.5.1",
-    "jest": "^25.5.4",
-    "typescript": "^3.8.3"
+    "@babel/core": "7.9.6",
+    "@babel/preset-env": "7.9.6",
+    "@babel/preset-typescript": "7.9.0",
+    "@types/jest": "25.2.1",
+    "babel-jest": "25.5.1",
+    "jest": "25.5.4",
+    "typescript": "3.8.3"
   },
   "files": [
     "lib"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shaolinmkz/browser-inmem-storage"
+    "url": "git+https://github.com/shaolinmkz/browser-in-mem-storage"
   }
 }
