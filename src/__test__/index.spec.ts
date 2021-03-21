@@ -23,7 +23,7 @@ describe('BrowserInMemStorage', () => {
     console.error = jest.fn();
 
     // @ts-ignore
-    setItem(123455, 'casue an error');
+    setItem(123455, 'casue an error'); // This was ignored on purpose to cause an error
 
     expect(console.error).toHaveBeenCalled();
     expect(console.error).toHaveBeenCalledWith('The key argument passed to setItem must be a string');
