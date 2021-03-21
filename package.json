@@ -1,7 +1,7 @@
 {
   "name": "browser-in-mem-storage",
   "version": "1.0.0",
-  "description": "Browser in-memory storage, protect token against common XXS attacks",
+  "description": "Browser in-memory storage",
   "main": "lib/index.js",
   "types": "lib",
   "scripts": {
@@ -9,8 +9,11 @@
     "build": "rm -rf lib && tsc -p ."
   },
   "keywords": [
-    "Browser in memory storage",
-    "In memory storage"
+    "Browser in-memory storage",
+    "In-memory storage",
+    "XXS attack protection",
+    "protect tokens",
+    "protect sensitive data"
   ],
   "author": "Nwabuzor, Chukwuemeka Obiora",
   "license": "ISC",
