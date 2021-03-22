@@ -4,6 +4,12 @@
 
 Simple in-memory storage for storing sensitive informations like a token.
 
+
+[View Sample](https://8806v.csb.app/)
+
+---
+<img src="https://res.cloudinary.com/shaolinmkz/image/upload/v1616415559/My-port-folio/in-mem-storage.gif" width="500" />
+
 # Installation
 
 ```sh
@@ -67,10 +73,15 @@ console.log(BrowserInMemStorage.inMemStorage) // {}
  * Initiates the logout procedure
  * Incase you don't want to clear storage during a logout
  * You can remove the items you dont need then invoke the logout function
- * Takes no argument
+ * The callback will be called when the logout method is invoked
+ * Takes a callback as an argument
  */
-removeItem('name');
-logout();
+const handleLogoutProcedure = () => {
+  // remove auth token and reload app
+  removeItem('token');
+};
+
+logout(handleLogoutProcedure);
 ```
 
 ---
@@ -83,5 +94,7 @@ BrowserInMemStorage.setItem('name', 'Obiora C.N');
 BrowserInMemStorage.getItem('name');
 BrowserInMemStorage.removeItem('name');
 BrowserInMemStorage.clear();
-BrowserInMemStorage.logout();
+BrowserInMemStorage.logout(() => {
+  // remove auth token and reload app
+});
 ```

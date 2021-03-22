@@ -30,7 +30,7 @@ describe('BrowserInMemStorage', () => {
   });
 
   it('should store items in memory', () => {
-    setItem('name', 'Obiora N.C');
+    BrowserInMemStorage.inMemStorage.name = 'Obiora N.C';
     setItem('occupation', 'Software Engineer');
     setItem('technologies', ['Reactjs', 'VueJs', 'NodeJs', 'SCSS']);
     setItem('yearsOfExperience', 3);
@@ -83,7 +83,7 @@ describe('BrowserInMemStorage', () => {
   });
 
   it('should prep listerners for logout', () => {
-    logout();
+    logout(() => {});
   });
 
   it('should clear in memory storage', () => {
