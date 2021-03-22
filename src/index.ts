@@ -1,5 +1,6 @@
 export default class BrowserInMemStorage {
-  public static inMemStorage: any = {}; // In-memory storage object
+
+  public static inMemStorage: any = {} // In-memory storage object
   public static size: number = 0; // Number of items in the storage object
   private static hasInvoked: boolean = false; // Checker if the constructor has been invoked
   private static canLogout: boolean = false; // Checker to allow logout and preventing in-memory storage
@@ -84,13 +85,14 @@ export default class BrowserInMemStorage {
     BrowserInMemStorage.size = Object.keys(BrowserInMemStorage.inMemStorage).length;
   }
 
-  public static logout(): void {
-    BrowserInMemStorage.canLogout = true;
+  public static logout(callback: () => void): void {
+    callback?.();
+    BrowserInMemStorage.canLogout = false;
   }
 
   public static clear(): void {
-    BrowserInMemStorage.logout();
     BrowserInMemStorage.inMemStorage = {};
+    BrowserInMemStorage.canLogout = true;
     BrowserInMemStorage.hasInvoked = false;
     BrowserInMemStorage.calculateStorageLength();
   }
@@ -144,6 +146,6 @@ export const clear = (): void => {
   BrowserInMemStorage.clear();
 };
 
-export const logout = (): void => {
-  BrowserInMemStorage.logout();
+export const logout = (callback: () => void): void => {
+  BrowserInMemStorage.logout(callback);
 };
